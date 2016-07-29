@@ -29,3 +29,8 @@ or
 
     git diff2html HEAD..HEAD^
 
+# Screenshots
+
+![Top of page](/screenshots/snapshot1.png?raw=true "Top of page")
+![Top of page](/screenshots/snapshot3.png?raw=true "Drop-down menu")
+![Top of page](/screenshots/snapshot2.png?raw=true "Navigation")
