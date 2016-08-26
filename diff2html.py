@@ -46,7 +46,7 @@ except ImportError:
 linesize = 20
 tabsize = 8
 show_CR = False
-encoding = "utf-8"
+encoding = "ISO-8859-1"
 lang = "en"
 algorithm = 0
 
@@ -524,6 +524,9 @@ def parse_input(input_file, input_file_name,
                 if m:
                     fNameB = (m.groups()[1]).strip()
                     break
+            
+            if file_name == "null":
+               file_name = fNameB                
                 
             add_filename(fNameA, fNameB, file_name)            
             hunk_off1, hunk_size1, hunk_off2, hunk_size2 = 0, 0, 0, 0
