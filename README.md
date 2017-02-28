@@ -17,7 +17,8 @@ I have create a git alias for it which automatically generates the html report a
 If you decide to use it the same way just edit your .gitconfig file and add the following line under the [alias] section:
 
     [alias]
-        diff2html = "!f() { rm -rf <TEMP-DIR-LOCATION>; mkdir -p <TEMP-DIR-LOCATION>; if [ \"$1\" == \"\" ]; then echo \"No input!\" && exit; fi; git diff -U1000 $@ | python <SCRIPT-LOCATION>/diff2html.py -o <TEMP-DIR-LOCATION>/diff.html && firefox file:///<TEMP-DIR-LOCATION>/diff.html; }; f"
+          diff2html = "!f() { rm -rf ~/tmp/git-diff; mkdir -p ~/tmp/git-diff; if [ \"$1\" == \"\" ]; then echo \"No input!\" && exit; fi; git diff -U1000 $@ | python /k/scripts/diff2html/diff2html.py -o ~/tmp/git-diff/diff.html && start ~/tmp/git-diff/diff.html; }; f" 
+          diff2htmlc = "!f() { rm -rf ~/tmp/git-diff; mkdir -p ~/tmp/git-diff; git diff --cached -U1000 | python /k/scripts/diff2html/diff2html.py -o ~/tmp/git-diff/diff.html && start ~/tmp/git-diff/diff.html; }; f" 
 
 Just change <TEMP-DIR-LOCATION> to a temporary folder you don't need, and <SCRIPT-LOCATION> to the direcotry you store the script in
 
